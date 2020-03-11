@@ -105,6 +105,7 @@ def decode_jwt():
                 }
     return jsonify(**response)
 
+# This comment is just test aws codepipeline
 @APP.route('/commit')
 def test_commit():
     return jsonify({"test": "New commit deployed"})
