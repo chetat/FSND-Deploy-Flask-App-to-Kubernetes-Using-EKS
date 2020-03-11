@@ -108,7 +108,7 @@ def decode_jwt():
 # This comment is just test aws codepipeline
 @APP.route('/commit')
 def test_commit():
-    return jsonify({"test": "New commit deployed"})
+    return jsonify({"test": "New commit deployed Update parameter store"})
 
 def _get_jwt(user_data):
     exp_time = datetime.datetime.utcnow() + datetime.timedelta(weeks=2)
