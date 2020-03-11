@@ -37,6 +37,7 @@ LOG = _logger()
 LOG.debug("Starting with log level: %s" % LOG_LEVEL )
 APP = Flask(__name__)
 
+
 def require_jwt(function):
     """
     Decorator to check valid jwt is present.
@@ -97,9 +98,11 @@ def decode_jwt():
         abort(401)
 
 
-    response = {'email': data['email'],
+    response = {
+        'email': data['email'],
                 'exp': data['exp'],
-                'nbf': data['nbf'] }
+                'nbf': data['nbf'] 
+                }
     return jsonify(**response)
 
 
