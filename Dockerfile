@@ -1,4 +1,4 @@
-FROM python:stretch
+FROM python
 COPY . /examples
 
 WORKDIR /examples
