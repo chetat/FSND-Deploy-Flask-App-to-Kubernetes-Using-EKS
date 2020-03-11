@@ -105,6 +105,9 @@ def decode_jwt():
                 }
     return jsonify(**response)
 
+@APP.route('/commit')
+def test_commit():
+    return jsonify({"test": "New commit deployed"})
 
 def _get_jwt(user_data):
     exp_time = datetime.datetime.utcnow() + datetime.timedelta(weeks=2)
