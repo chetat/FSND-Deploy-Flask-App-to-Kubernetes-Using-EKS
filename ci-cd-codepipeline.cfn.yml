@@ -29,7 +29,6 @@ Parameters:
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository branch name
-
   GitHubToken:
     Type: String
     NoEcho: true
